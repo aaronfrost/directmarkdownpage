@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "directmarkdownpage"
+    }
+  },
+  "defaultProject": "directmarkdownpage",
+  "cli": {
+    "analytics": false
+  }
 }
