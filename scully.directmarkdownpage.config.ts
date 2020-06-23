@@ -19,7 +19,7 @@ export const config: ScullyConfig = {
     '/bar': {
       type: 'tadaa',
       file: './content/bar.md',
-      postRenderers: ['contentRenderer'],
+      postRenderers: ['contentFolder'],
     },
   },
 };
