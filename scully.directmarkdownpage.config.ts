@@ -7,6 +7,7 @@ const tadaaPlugin = registerPlugin('router', 'tadaa', async (route, config) => {
     {
       route,
       templateFile: join(scullyConfig.homeFolder, config.file),
+      postRenderers: ['contentFolder'],
     },
   ];
 });
@@ -19,7 +20,10 @@ export const config: ScullyConfig = {
     '/bar': {
       type: 'tadaa',
       file: './content/bar.md',
-      postRenderers: ['contentFolder'],
+    },
+    '': {
+      type: 'tadaa',
+      file: './content/bar.md',
     },
   },
 };
