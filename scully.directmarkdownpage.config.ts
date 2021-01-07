@@ -1,7 +1,7 @@
 import { registerPlugin, scullyConfig, ScullyConfig } from '@scullyio/scully';
 import { join } from 'path';
 
-const tadaaPlugin = registerPlugin('router', 'tadaa', async (route, config) => {
+const staticFile = registerPlugin('router', 'staticFile', async (route, config) => {
   console.log(join(scullyConfig.homeFolder, config.file));
   return [
     {
@@ -18,11 +18,11 @@ export const config: ScullyConfig = {
   outDir: './dist/static',
   routes: {
     '/bar': {
-      type: 'tadaa',
+      type: 'staticFile',
       file: './content/bar.md',
     },
     '': {
-      type: 'tadaa',
+      type: 'staticFile',
       file: './content/bar.md',
     },
   },
